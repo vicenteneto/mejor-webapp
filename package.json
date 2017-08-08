@@ -2,7 +2,8 @@
   "name": "mejorwebapp",
   "private": true,
   "scripts": {
-    "start": "grunt serve"
+    "start": "grunt serve",
+    "install": "bower install"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
