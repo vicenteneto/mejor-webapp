@@ -9,8 +9,5 @@
  */
 angular.module('mejorWebappApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS'
-    ];
+
   });
