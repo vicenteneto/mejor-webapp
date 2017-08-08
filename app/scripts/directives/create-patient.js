@@ -3,23 +3,23 @@
 
   /**
    * @ngdoc function
-   * @name mejorWebappApp.directive:MejorHeader
+   * @name mejorWebappApp.directive:CreatePatient
    * @description
-   * # MejorHeader
+   * # CreatePatient
    * Directive of the mejorWebappApp
    */
   angular
     .module('mejorWebappApp')
-    .directive('mejorHeader', mejorHeader);
+    .directive('createPatient', createPatient);
 
-  function mejorHeader() {
+  function createPatient() {
     return {
       restrict: 'E',
       scope: {
         patient: '=',
-        bookNow: '='
+        save: '='
       },
-      templateUrl: 'views/mejor-header.html'
+      templateUrl: 'views/create-patient.html'
     };
   }
 })();

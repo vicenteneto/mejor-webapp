@@ -13,7 +13,7 @@
     };
 
     function create(appointment) {
-      return ResourceFactory.appointmentResource.save({}, appointment).$promise;
+      return ResourceFactory.appointmentResource.save(appointment).$promise;
     }
 
     function query() {
