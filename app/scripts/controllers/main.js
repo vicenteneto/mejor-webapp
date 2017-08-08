@@ -40,7 +40,8 @@
     }
 
     function showCalendar() {
-
+      angular.element('#createPatientModal').modal('hide');
+      angular.element('#createAppointmentModal').modal('show');
     }
 
     function createPatient() {
