@@ -9,13 +9,18 @@
    * Controller of the mejorWebappApp
    */
   angular.module('mejorWebappApp')
-    .controller('MainCtrl', function () {
-      var vm = this;
+    .controller('MainCtrl', mainCtrl);
 
-      vm.bookNow = bookNow;
+  /* @ngInject */
+  function mainCtrl(PatientService) {
+    var vm = this;
 
-      function bookNow(email) {
-        alert(email);
-      }
-    });
+    vm.bookNow = bookNow;
+
+    function bookNow(email) {
+      PatientService.query({email: email}).then(function (patients) {
+        console.log(patients);
+      });
+    }
+  }
 })();
