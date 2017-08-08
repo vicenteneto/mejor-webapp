@@ -1,0 +1,16 @@
+<!-- Jumbotron Header -->
+<header class="jumbotron my-4">
+  <h1 class="display-3">A Warm Welcome!</h1>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt
+    possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam
+    repellat.</p>
+
+  <form name="appointmentForm" class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="email">Email address</label>
+      <input id="email" type="email" name="email" class="form-control"
+             placeholder="Your email" ng-model="email" required>
+    </div>
+    <button class="btn btn-primary" ng-click="bookNow(email)">Book now!</button>
+  </form>
+</header>
