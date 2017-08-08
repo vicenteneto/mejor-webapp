@@ -13,7 +13,7 @@
     };
 
     function create(patient) {
-      return ResourceFactory.patientResource.save({}, patient).$promise;
+      return ResourceFactory.patientResource.save(patient).$promise;
     }
 
     function query(params) {
