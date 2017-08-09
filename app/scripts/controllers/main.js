@@ -17,11 +17,13 @@
 
     vm.availables = [];
     vm.schedules = [];
+    vm.appointment = {};
     vm.patient = {};
 
     vm.init = init;
     vm.bookNow = bookNow;
     vm.createPatient = createPatient;
+    vm.createAppointment = createAppointment;
 
     function init() {
       ScheduleService.query().then(function (schedules) {
@@ -53,6 +55,7 @@
     function showAppointmentModal() {
       AppointmentService.availables(vm.patient.email).then(function (availables) {
         vm.availables = availables;
+        vm.appointment.email = vm.patient.email;
 
         if (angular.element('#createPatientModal').hasClass('show')) {
           angular.element('#createPatientModal').modal('hide');
@@ -66,8 +69,18 @@
     function createPatient() {
       PatientService.create(vm.patient).then(function () {
         $log.log('Patient created with success');
+        showAppointmentModal();
       }, function () {
         $log.error('Error creating patient');
+      });
+    }
+
+    function createAppointment() {
+      AppointmentService.create(vm.appointment).then(function () {
+        $log.log('Appointment created with success');
+        angular.element('#createAppointmentModal').modal('hide');
+      }, function () {
+        $log.error('Error creating appointment');
       });
     }
   }

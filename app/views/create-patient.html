@@ -12,28 +12,32 @@
         <form>
           <div class="form-group">
             <label class="sr-only" for="name">Name</label>
-            <input id="name" class="form-control required" placeholder="Name"
-                   ng-model="patient.name">
+            <input id="name" class="form-control" placeholder="Name"
+                   ng-model="patient.name"
+                   required>
           </div>
           <div class="form-group">
             <label class="sr-only" for="dateOfBirth">Date of Birth</label>
-            <input id="dateOfBirth" type="date" class="form-control required" placeholder="Date of birth"
-                   ng-model="patient.dateOfBirth">
+            <input id="dateOfBirth" type="date" class="form-control" placeholder="Date of birth"
+                   ng-model="patient.dateOfBirth"
+                   required>
           </div>
           <div class="form-group">
             <label class="sr-only" for="location">Location</label>
-            <input id="location" class="form-control required" placeholder="Location"
-                   ng-model="patient.location">
+            <input id="location" class="form-control" placeholder="Location"
+                   ng-model="patient.location"
+                   required>
           </div>
           <div class="form-group">
             <label class="sr-only" for="height">Height</label>
-            <input id="height" type="number" class="form-control required" placeholder="Height" min="0"
-                   ng-model="patient.height">
+            <input id="height" type="number" class="form-control" placeholder="Height" min="0"
+                   ng-model="patient.height"
+                   required>
           </div>
           <div class="form-group">
             <label class="sr-only" for="weight">Weight</label>
             <input id="weight" type="number" class="form-control required" placeholder="Weight" min="0"
-                   ng-model="patient.weight">
+                   ng-model="patient.weight" required>
           </div>
         </form>
       </div>

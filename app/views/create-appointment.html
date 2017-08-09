@@ -11,9 +11,9 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label class="sr-only" for="hour">Hour</label>
-            <select id="hour" class="form-control" ng-options="schedule as createAppointment.format(schedule) disable when createAppointment.isDisabled(schedule) for schedule in schedules"
-                    ng-model="appointment.hour"></select>
+            <label class="sr-only" for="date">Date</label>
+            <select id="date" class="form-control" ng-options="schedule.date as createAppointment.format(schedule) disable when createAppointment.isDisabled(schedule) for schedule in schedules"
+                    ng-model="appointment.date"></select>
           </div>
         </form>
       </div>

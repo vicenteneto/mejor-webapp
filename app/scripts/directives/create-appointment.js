@@ -16,7 +16,7 @@
     return {
       restrict: 'E',
       scope: {
-        patient: '=',
+        appointment: '=',
         schedules: '=',
         availables: '=',
         save: '='
