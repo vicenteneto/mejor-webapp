@@ -9,7 +9,13 @@
         </button>
       </div>
       <div class="modal-body">
-
+        <form>
+          <div class="form-group">
+            <label class="sr-only" for="hour">Hour</label>
+            <select id="hour" class="form-control" ng-options="schedule as createAppointment.format(schedule) disable when createAppointment.isDisabled(schedule) for schedule in schedules"
+                    ng-model="appointment.hour"></select>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

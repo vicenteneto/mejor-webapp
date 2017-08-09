@@ -9,15 +9,15 @@
   function appointmentService(ResourceFactory) {
     return {
       create: create,
-      query: query
+      availables: availables
     };
 
     function create(appointment) {
       return ResourceFactory.appointmentResource.save(appointment).$promise;
     }
 
-    function query() {
-      return ResourceFactory.appointmentResource.query({}).$promise;
+    function availables(email) {
+      return ResourceFactory.appointmentResource.query({email: email, resource: 'availables'}).$promise;
     }
   }
 })();

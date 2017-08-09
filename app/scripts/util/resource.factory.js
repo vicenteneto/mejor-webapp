@@ -9,7 +9,8 @@
   function resourceFactory($resource, URLUtil) {
     return {
       appointmentResource: appointmentResource(),
-      patientResource: patientResource()
+      patientResource: patientResource(),
+      scheduleResource: scheduleResource()
     };
 
     function appointmentResource() {
@@ -18,6 +19,10 @@
 
     function patientResource() {
       return getResource(URLUtil.PATIENT);
+    }
+
+    function scheduleResource() {
+      return getResource(URLUtil.SCHEDULE);
     }
 
     function getResource(url) {
