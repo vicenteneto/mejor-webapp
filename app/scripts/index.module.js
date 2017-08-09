@@ -13,6 +13,7 @@
     .module('mejorWebappApp', [
       'ngAnimate',
       'ngResource',
-      'ngRoute'
+      'ngRoute',
+      'angularMoment'
     ]);
 })();

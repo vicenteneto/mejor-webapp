@@ -11,7 +11,8 @@
 
     return {
       APPOINTMENT: URL + 'appointments/:email/:resource',
-      PATIENT: URL + 'patients'
+      PATIENT: URL + 'patients',
+      SCHEDULE: URL + 'schedules'
     };
   }
 })();
