@@ -5,4 +5,5 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+* Run `npm install` to install dependencies.
+* Run `npm start` to execute the server.
