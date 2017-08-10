@@ -19,7 +19,21 @@
         patient: '=',
         save: '='
       },
-      templateUrl: 'views/create-patient.html'
+      templateUrl: 'views/create-patient.html',
+      controller: createPatientCtrl,
+      controllerAs: 'createPatient'
     };
+
+    /* @ngInject */
+    function createPatientCtrl($scope) {
+      var vm = this;
+
+      vm.isValid = isValid;
+
+      function isValid() {
+        return $scope.patient.name && $scope.patient.dateOfBirth && $scope.patient.location
+          && $scope.patient.height && $scope.patient.weight;
+      }
+    }
   }
 })();

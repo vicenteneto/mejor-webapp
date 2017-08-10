@@ -30,13 +30,18 @@
     function createAppointmentCtrl($scope, moment) {
       var vm = this;
 
-      vm.isDisabled = isDisabled;
+      vm.isReserved = isReserved;
+      vm.isValid = isValid;
       vm.format = format;
 
-      function isDisabled(schedule) {
+      function isReserved(schedule) {
         return !Boolean($scope.availables.find(function (available) {
           return available === schedule.date;
         }));
+      }
+
+      function isValid() {
+        return $scope.appointment.email && $scope.appointment.date;
       }
 
       function format(schedule) {
