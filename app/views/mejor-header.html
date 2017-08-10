@@ -1,6 +1,6 @@
 <!-- Jumbotron Header -->
 <header class="jumbotron my-4">
-  <h1 class="display-3">A Warm Welcome!</h1>
+  <h1 class="display-3">Reserve an appointment!</h1>
   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt
     possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam
     repellat.</p>
@@ -11,6 +11,16 @@
       <input id="email" type="email" name="email" class="form-control"
              placeholder="Your email" ng-model="patient.email" required>
     </div>
-    <button class="btn btn-primary" ng-click="bookNow()">Book now!</button>
+    <button class="btn btn-primary" ng-click="mejorHeaderCtrl.bookNow()">Book now!</button>
   </form>
+
+  <br/>
+  <div class="alert alert-dismissible" ng-class="mejorHeaderCtrl.messages[mejorHeaderCtrl.messageType].class"
+       role="alert" ng-if="mejorHeaderCtrl.messageType">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span>&times;</span>
+    </button>
+    <strong>{{mejorHeaderCtrl.messages[mejorHeaderCtrl.messageType].header}}</strong>
+    {{mejorHeaderCtrl.messages[mejorHeaderCtrl.messageType].message}}
+  </div>
 </header>
